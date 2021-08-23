@@ -18,7 +18,7 @@
 如上图所示，在做分库分表的过程中，我们有时候会希望对现有的架构进行扩容，如3个库扩展到6个库，这个时候会涉及到数据的迁移，以及存量数据迁移后无缝开启增量数据同步。
 数据迁移过程中，我们往往会迁移部分命中分片逻辑的数据，如下图所示，新的DB5是id%6=4（6个分片，余数从0开始），而DB6是id%6=5。
 
-![DTS扩容.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627540487/DTS%E6%89%A9%E5%AE%B9.png)
+![DTS扩容.png](https://github.com/nicholaskh/opendts/blob/master/image/DTS%E6%89%A9%E5%AE%B9.png)
 
 迁移过程中，我们会使用DTS的filter功能，只迁移id % 6 = x的数据。
 DTS中过滤器由SQL语句表示，以上过滤器写为：
@@ -30,7 +30,7 @@ SELECT * FROM user WHERE id % 6 = 4;
 这个过程中，如果同时接入了dbproxy，那么生活会非常美好，我们只需要等候整个任务完成就行，中间的操作，DTS会自动与dbproxy进行通信，修改其分片路由转发规则。
 
 ## OLAP场景，MySQL数据同步到Kafka
-![AP DTS.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627541190/AP%20DTS.png)
+![AP DTS.png](https://github.com/nicholaskh/opendts/blob/master/image/AP%20DTS.png)
 
 如上图所示，在有线下数据分析的场景下，我们往往希望把MySQL里的数据实时同步一份到线下AP类数据库中，如Hive表、Clickhouse等，来支持尽可能实时的数据分析输出。以往，在没有DTS的时候，我们往往需要业务方手动双写一份到kafka里，并且各个业务方在写入kafka的时候需要确保写入的数据格式的一致性。
 而一旦有了DTS，事情将变得非常简单。我们只需要针对数据表创建一个DTS任务，MySQL数据就会“实时”地同步到kafka里。
@@ -43,7 +43,7 @@ SELECT * FROM user WHERE id % 6 = 4;
 
 ## 双活场景，主从机房间通过DTS做数据实时同步
 
-![双活dts.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627542062/%E5%8F%8C%E6%B4%BBdts.png)
+![双活dts.png](https://github.com/nicholaskh/opendts/blob/master/image/%E5%8F%8C%E6%B4%BBdts.png)
 
 双活场景中，DTS一般部署在对端目标机房，我们通过DTS抽取MySQL binlog来做实时的数据同步。在毫秒级延迟的专线环境下，一般的同步延迟（sbm）在一秒以下。
 通过DTS的数据抽取与重放服务的分开部署，我们还能进一步减小专线的吞吐量。即将数据抽取服务部署在源机房，抽取过程中过滤掉不需要的数据，只传输需要的数据到目标机房。
@@ -67,7 +67,7 @@ SELECT * FROM user WHERE id % 6 = 4;
 
 # 实现细节
 ## 系统架构
-![DTS architecture.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627542860/DTS%20architecture.png)
+![DTS architecture.png](https://github.com/nicholaskh/opendts/blob/master/image/DTS%20architecture.png)
 
 如图是DTS的系统架构，我们看到大致的分层和模块化：
 分层：
@@ -78,14 +78,14 @@ SELECT * FROM user WHERE id % 6 = 4;
 
 ## 跨机房部署架构
 
-![datastreaming dts.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627542808/data-streaming%20dts.png)
+![datastreaming dts.png](https://github.com/nicholaskh/opendts/blob/master/image/data-streaming%20dts.png)
 
 如图所示，DTS一般和目标数据集群部署在一起。
 在基于DBAgent抽取数据的基础上，也可以将抽取逻辑放在DBAgent里，将数据抽取、过滤放到源机房，重放逻辑放到目标机房里。
 
 ## 软件部署架构
 
-![replicator部署.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627543432/replicator%E9%83%A8%E7%BD%B2.png)
+![replicator部署.png](https://github.com/nicholaskh/opendts/blob/master/image/replicator%E9%83%A8%E7%BD%B2.png)
 
 如图所示，DTS在部署上会依赖以下几个组件：
 - Etcd：用来做服务注册及一些实例源信息存储
@@ -97,20 +97,20 @@ DTS内部大概分为两个服务：
 
 ## 全量 + 增量同步原理
 
-![replicator全量增量复制.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627543642/replicator%E5%85%A8%E9%87%8F%2B%E5%A2%9E%E9%87%8F%E5%A4%8D%E5%88%B6.png)
+![replicator全量增量复制.png](https://github.com/nicholaskh/opendts/blob/master/image/replicator%E5%85%A8%E9%87%8F%2B%E5%A2%9E%E9%87%8F%E5%A4%8D%E5%88%B6.png)
 
 ## 基于GTID的binlog抽取
 
 基于GTID dump binlog的命令格式如图所示：
-![gtid binlog format.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627543854/gtid%20binlog%20format.png)
+![gtid binlog format.png](https://github.com/nicholaskh/opendts/blob/master/image/gtid%20binlog%20format.png)
 
 其中的data字段：
-![binlog data format.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627543774/binlog%20data%20format.png)
+![binlog data format.png](https://github.com/nicholaskh/opendts/blob/master/image/binlog%20data%20format.png)
 
 ## Binlog Event structure - v4
 
 MySQL传输过来的binlog二进制流如图
-![v4 event structure.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627544454/v4%20event%20structure.png)
+![v4 event structure.png](https://github.com/nicholaskh/opendts/blob/master/image/v4%20event%20structure.png)
 
 # DTS当前功能集
 ## 基础功能
@@ -141,36 +141,36 @@ MySQL传输过来的binlog二进制流如图
 
 # 用户接入
 
-![用户接入dts流程.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627545195/%E7%94%A8%E6%88%B7%E6%8E%A5%E5%85%A5dts%E6%B5%81%E7%A8%8B.png)
+![用户接入dts流程.png](https://github.com/nicholaskh/opendts/blob/master/image/%E7%94%A8%E6%88%B7%E6%8E%A5%E5%85%A5dts%E6%B5%81%E7%A8%8B.png)
 
 后续我们会把接入流程一站式集成到zeus 2.0上。
 
 # 业界对比
 ## AP场景
-![dts横向对比.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627545327/dts%E6%A8%AA%E5%90%91%E5%AF%B9%E6%AF%94.png)
+![dts横向对比.png](https://github.com/nicholaskh/opendts/blob/master/image/dts%E6%A8%AA%E5%90%91%E5%AF%B9%E6%AF%94.png)
 
 ## TP场景
-![dts vs阿里云dts.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627545328/dts%20vs%E9%98%BF%E9%87%8C%E4%BA%91dts.png)
+![dts vs阿里云dts.png](https://github.com/nicholaskh/opendts/blob/master/image/dts%20vs%E9%98%BF%E9%87%8C%E4%BA%91dts.png)
 
 # 监控
 ## grafana + prometheus
-![dts监控2.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627545455/dts%E7%9B%91%E6%8E%A72.png)
+![dts监控2.png](https://github.com/nicholaskh/opendts/blob/master/image/dts%E7%9B%91%E6%8E%A72.png)
 
-![dts监控1.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627545457/dts%E7%9B%91%E6%8E%A71.png)
+![dts监控1.png](https://github.com/nicholaskh/opendts/blob/master/image/dts%E7%9B%91%E6%8E%A71.png)
 
 ## 日志监控（TBD）
 
 # 压测
-![replicator_test_rows_qps.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627547157/replicator_test_rows_qps.png)
+![replicator_test_rows_qps.png](https://github.com/nicholaskh/opendts/blob/master/image/replicator_test_rows_qps.png)
 
-![replicator_test_kafka_qps.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627545710/replicator_test_kafka_qps.png)
+![replicator_test_kafka_qps.png](https://github.com/nicholaskh/opendts/blob/master/image/replicator_test_kafka_qps.png)
 
 ## 火焰图
 ### inuse_space
-![replicator_inuse_space.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627547261/replicator_inuse_space.png)
+![replicator_inuse_space.png](https://github.com/nicholaskh/opendts/blob/master/image/replicator_inuse_space.png)
 
 ### on_cpu
-![replicator_cpu.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627545568/replicator_cpu.png)
+![replicator_cpu.png](https://github.com/nicholaskh/opendts/blob/master/image/replicator_cpu.png)
 
 # Roadmap
 - DTS + dbproxy实现在线自动扩容
@@ -186,5 +186,3 @@ MySQL传输过来的binlog二进制流如图
 - Maxwell：https://github.com/zendesk/maxwell
 - Canal：https://github.com/alibaba/canal
 - 阿里云DTS：https://help.aliyun.com/product/26590.html
-- DTS未来云文档：http://cloud.tal.com/docs/dts/
-- zeus 2.0：http://cloud.tal.com/zeus-fe/workBench/index
