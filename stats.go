@@ -3,10 +3,10 @@ package replicator
 import (
 	"sync"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/stats"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util/history"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util/sync2"
+	"github.com/nicholaskh/opendts/mysql"
+	"github.com/nicholaskh/opendts/stats"
+	"github.com/nicholaskh/opendts/util/history"
+	"github.com/nicholaskh/opendts/util/sync2"
 )
 
 const (

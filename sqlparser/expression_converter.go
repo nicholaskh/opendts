@@ -19,7 +19,7 @@ package sqlparser
 import (
 	"fmt"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/evalengine"
+	"github.com/nicholaskh/opendts/evalengine"
 )
 
 // ErrExprNotSupported signals that the expression cannot be handled by expression evaluation engine.

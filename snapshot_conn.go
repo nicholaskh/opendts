@@ -20,9 +20,9 @@ import (
 	"context"
 	"fmt"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqlparser"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/mysql"
+	"github.com/nicholaskh/opendts/sqlparser"
 )
 
 // snapshotConn is wrapper on mysql.Conn capable of

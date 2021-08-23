@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/config"
-	etcdclient "git.100tal.com/wangxiao_jichujiagou_common/dts/etcd"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
+	"github.com/nicholaskh/opendts/config"
+	etcdclient "github.com/nicholaskh/opendts/etcd"
+	"github.com/nicholaskh/opendts/log"
 )
 
 type Register struct {

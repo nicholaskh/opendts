@@ -22,8 +22,8 @@ import (
 	"io"
 	"strings"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util/bytes2"
+	"github.com/nicholaskh/opendts/sqltypes"
+	"github.com/nicholaskh/opendts/util/bytes2"
 )
 
 const (

@@ -23,7 +23,7 @@ import (
 	"regexp"
 	"strings"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
+	"github.com/nicholaskh/opendts/proto"
 )
 
 // This file contains helper methods to deal with Schema information.

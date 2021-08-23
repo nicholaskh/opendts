@@ -22,7 +22,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
+	"github.com/nicholaskh/opendts/log"
 )
 
 // counters is similar to expvar.Map, except that it doesn't allow floats.

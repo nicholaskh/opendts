@@ -9,7 +9,7 @@ import (
 	bm "github.com/go-kratos/kratos/pkg/net/http/blademaster"
 	xtime "github.com/go-kratos/kratos/pkg/time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
+	"github.com/nicholaskh/opendts/mysql"
 )
 
 var Conf *ReplicatorConfig

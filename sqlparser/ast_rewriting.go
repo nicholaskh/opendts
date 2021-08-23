@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sysvar"
+	"github.com/nicholaskh/opendts/proto"
+	"github.com/nicholaskh/opendts/sysvar"
 )
 
 // RewriteASTResult contains the rewritten ast and meta information about it

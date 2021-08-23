@@ -13,13 +13,13 @@ import (
 	"github.com/go-kratos/kratos/pkg/conf/env"
 	"github.com/go-kratos/kratos/pkg/net/ip"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/config"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/http_server"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log/xlog"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/register"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/stats/prometheus"
+	"github.com/nicholaskh/opendts"
+	"github.com/nicholaskh/opendts/config"
+	"github.com/nicholaskh/opendts/http_server"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/log/xlog"
+	"github.com/nicholaskh/opendts/register"
+	"github.com/nicholaskh/opendts/stats/prometheus"
 )
 
 var configPath = flag.String("config", "etc/replicator.ini", "path to replicator config file")

@@ -25,8 +25,8 @@ import (
 	proto2 "github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/require"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/test_utils"
+	"github.com/nicholaskh/opendts/proto"
+	"github.com/nicholaskh/opendts/test_utils"
 )
 
 func TestProtoConversions(t *testing.T) {

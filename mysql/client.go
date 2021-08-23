@@ -25,7 +25,7 @@ import (
 	"strings"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/vttls"
+	"github.com/nicholaskh/opendts/vttls"
 )
 
 // connectResult is used by Connect.

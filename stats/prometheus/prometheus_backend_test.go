@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/stats"
+	"github.com/nicholaskh/opendts/stats"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )

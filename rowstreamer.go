@@ -21,11 +21,11 @@ import (
 	"errors"
 	"fmt"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqlparser"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/mysql"
+	"github.com/nicholaskh/opendts/proto"
+	"github.com/nicholaskh/opendts/sqlparser"
+	"github.com/nicholaskh/opendts/sqltypes"
 )
 
 // rowStreamer is used for copying the existing rows of a table

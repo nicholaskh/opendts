@@ -12,8 +12,8 @@ import (
 
 	bm "github.com/go-kratos/kratos/pkg/net/http/blademaster"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/http_server/vo"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/http_server/vo"
 )
 
 func (s *HttpServer) submitTask(ctx *bm.Context) {

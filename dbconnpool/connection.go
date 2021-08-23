@@ -19,8 +19,8 @@ package dbconnpool
 import (
 	"context"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
+	"github.com/nicholaskh/opendts/mysql"
+	"github.com/nicholaskh/opendts/sqltypes"
 )
 
 // DBConnection re-exposes mysql.Conn with some wrapping to implement

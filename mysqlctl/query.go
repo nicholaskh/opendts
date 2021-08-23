@@ -22,10 +22,10 @@ import (
 	"strings"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/dbconnpool"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/dbconnpool"
+	"github.com/nicholaskh/opendts/mysql"
+	"github.com/nicholaskh/opendts/sqltypes"
 )
 
 // getPoolReconnect gets a connection from a pool, tests it, and reconnects if

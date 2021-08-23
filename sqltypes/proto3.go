@@ -19,7 +19,7 @@ package sqltypes
 import (
 	proto2 "github.com/golang/protobuf/proto"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
+	"github.com/nicholaskh/opendts/proto"
 )
 
 // This file contains the proto3 conversion functions for the structures

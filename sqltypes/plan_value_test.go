@@ -24,7 +24,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
+	"github.com/nicholaskh/opendts/proto"
 )
 
 func TestPlanValueIsNull(t *testing.T) {

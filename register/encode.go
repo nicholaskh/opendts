@@ -3,7 +3,7 @@ package register
 import (
 	"encoding/json"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
+	"github.com/nicholaskh/opendts/log"
 )
 
 // JSONEncode return json encoding of v

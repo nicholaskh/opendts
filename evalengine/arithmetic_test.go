@@ -28,9 +28,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/test_utils"
+	"github.com/nicholaskh/opendts/proto"
+	"github.com/nicholaskh/opendts/sqltypes"
+	"github.com/nicholaskh/opendts/test_utils"
 )
 
 var (

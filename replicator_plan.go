@@ -26,12 +26,12 @@ import (
 
 	kafka "github.com/segmentio/kafka-go"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/evalengine"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqlparser"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util/hack"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/evalengine"
+	"github.com/nicholaskh/opendts/proto"
+	"github.com/nicholaskh/opendts/sqlparser"
+	"github.com/nicholaskh/opendts/sqltypes"
+	"github.com/nicholaskh/opendts/util/hack"
 )
 
 // ReplicatorPlan is the execution plan for the replicator. It contains

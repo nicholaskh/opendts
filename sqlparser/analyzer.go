@@ -24,7 +24,7 @@ import (
 	"strings"
 	"unicode"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
+	"github.com/nicholaskh/opendts/sqltypes"
 )
 
 // StatementType encodes the type of a SQL statement

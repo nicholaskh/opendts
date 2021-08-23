@@ -26,7 +26,7 @@ import (
 
 	"github.com/coreos/etcd/client"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
+	"github.com/nicholaskh/opendts/log"
 )
 
 // ErrClosedEtcdClient means etcd client closed

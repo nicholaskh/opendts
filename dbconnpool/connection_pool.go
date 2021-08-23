@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/stats"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/mysql"
+	"github.com/nicholaskh/opendts/stats"
+	"github.com/nicholaskh/opendts/util"
 )
 
 var (

@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sort"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
+	"github.com/nicholaskh/opendts/proto"
 )
 
 // QueryMatchesTemplates sees if the given query has the same fingerprint as one of the given templates

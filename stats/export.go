@@ -35,7 +35,7 @@ import (
 	"sync"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
+	"github.com/nicholaskh/opendts/log"
 )
 
 const defaultEmitPeriod = 60 * time.Second

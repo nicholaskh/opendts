@@ -21,7 +21,7 @@ import (
 
 	proto2 "github.com/golang/protobuf/proto"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
+	"github.com/nicholaskh/opendts/proto"
 )
 
 // Result represents a query result.

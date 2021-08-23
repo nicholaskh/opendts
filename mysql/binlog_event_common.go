@@ -21,7 +21,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
+	"github.com/nicholaskh/opendts/proto"
 )
 
 // binlogEvent wraps a raw packet buffer and provides methods to examine it

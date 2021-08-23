@@ -29,10 +29,10 @@ import (
 	"sync"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqlparser"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util/bucketpool"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util/sync2"
+	"github.com/nicholaskh/opendts/proto"
+	"github.com/nicholaskh/opendts/sqlparser"
+	"github.com/nicholaskh/opendts/util/bucketpool"
+	"github.com/nicholaskh/opendts/util/sync2"
 )
 
 var mysqlServerFlushDelay = flag.Duration("mysql_server_flush_delay", 100*time.Millisecond, "Delay after which buffered response will be flushed to the client.")

@@ -1,7 +1,7 @@
 package http_server
 
 import (
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/http_server/middleware"
+	"github.com/nicholaskh/opendts/http_server/middleware"
 )
 
 func (s *HttpServer) initRouter() {

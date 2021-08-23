@@ -20,7 +20,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util/sync2"
+	"github.com/nicholaskh/opendts/util/sync2"
 )
 
 // Histogram tracks counts and totals while

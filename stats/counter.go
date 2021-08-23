@@ -19,8 +19,8 @@ package stats
 import (
 	"strconv"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util/sync2"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/util/sync2"
 )
 
 // Counter tracks a cumulative count of a metric.

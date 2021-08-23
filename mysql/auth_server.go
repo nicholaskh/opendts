@@ -24,7 +24,7 @@ import (
 	"fmt"
 	"strings"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
+	"github.com/nicholaskh/opendts/log"
 )
 
 // AuthServer is the interface that servers must implement to validate

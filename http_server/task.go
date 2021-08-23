@@ -12,10 +12,10 @@ import (
 	bm "github.com/go-kratos/kratos/pkg/net/http/blademaster"
 	"github.com/go-kratos/kratos/pkg/net/ip"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/http_server/vo"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
+	"github.com/nicholaskh/opendts"
+	"github.com/nicholaskh/opendts/http_server/vo"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/mysql"
 )
 
 const (

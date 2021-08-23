@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
+	"github.com/nicholaskh/opendts/sqltypes"
 )
 
 /*

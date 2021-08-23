@@ -8,8 +8,8 @@ import (
 	"math/big"
 	"sync"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/mysql"
 )
 
 var serverIDPool = NewIDPool(getRandomInitialServerID())

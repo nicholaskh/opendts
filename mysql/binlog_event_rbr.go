@@ -25,8 +25,8 @@ import (
 	"strings"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
+	"github.com/nicholaskh/opendts/proto"
+	"github.com/nicholaskh/opendts/sqltypes"
 )
 
 // ZeroTimestamp is the special value 0 for a timestamp.

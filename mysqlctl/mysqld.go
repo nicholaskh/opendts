@@ -38,9 +38,9 @@ import (
 	"sync"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/dbconnpool"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/dbconnpool"
+	"github.com/nicholaskh/opendts/mysql"
 )
 
 var (

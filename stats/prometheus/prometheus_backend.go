@@ -7,8 +7,8 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/stats"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/stats"
 )
 
 // PromBackend implements PullBackend using Prometheus as the backing metrics storage.

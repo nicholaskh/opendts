@@ -23,7 +23,7 @@ import (
 	"runtime/debug"
 	"sync"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
+	"github.com/nicholaskh/opendts/log"
 )
 
 // parserPool is a pool for parser objects.

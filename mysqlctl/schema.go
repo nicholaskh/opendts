@@ -25,11 +25,11 @@ import (
 	"strings"
 	"sync"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/evalengine"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysqlctl/tmutils"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqlescape"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
+	"github.com/nicholaskh/opendts/evalengine"
+	"github.com/nicholaskh/opendts/mysqlctl/tmutils"
+	"github.com/nicholaskh/opendts/proto"
+	"github.com/nicholaskh/opendts/sqlescape"
+	"github.com/nicholaskh/opendts/sqltypes"
 )
 
 var autoIncr = regexp.MustCompile(` AUTO_INCREMENT=\d+`)

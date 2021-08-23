@@ -9,8 +9,8 @@ import (
 
 	bm "github.com/go-kratos/kratos/pkg/net/http/blademaster"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/register"
+	"github.com/nicholaskh/opendts"
+	"github.com/nicholaskh/opendts/register"
 )
 
 type HttpServer struct {

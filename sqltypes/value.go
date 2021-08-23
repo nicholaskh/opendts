@@ -25,8 +25,8 @@ import (
 	"strconv"
 	"unsafe"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util/bytes2"
+	"github.com/nicholaskh/opendts/proto"
+	"github.com/nicholaskh/opendts/util/bytes2"
 )
 
 var (

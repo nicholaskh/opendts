@@ -22,8 +22,8 @@ import (
 	"sync"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/proto"
 )
 
 type relayLog struct {

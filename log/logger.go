@@ -17,7 +17,7 @@ package log
 import (
 	"fmt"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log/xlog"
+	"github.com/nicholaskh/opendts/log/xlog"
 )
 
 var logger Logger

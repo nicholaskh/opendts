@@ -19,7 +19,7 @@ package mysql
 import (
 	"fmt"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
+	"github.com/nicholaskh/opendts/proto"
 )
 
 // BinlogEvent represents a single event from a raw MySQL binlog dump stream.

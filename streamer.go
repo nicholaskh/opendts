@@ -9,11 +9,11 @@ import (
 	"strings"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/log"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/mysql"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqlparser"
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/sqltypes"
+	"github.com/nicholaskh/opendts/log"
+	"github.com/nicholaskh/opendts/mysql"
+	"github.com/nicholaskh/opendts/proto"
+	"github.com/nicholaskh/opendts/sqlparser"
+	"github.com/nicholaskh/opendts/sqltypes"
 )
 
 // NOTE 经测试，一个包约为250 Bytes左右，kafka类型的可调大，mysql类型的应尽可能调小

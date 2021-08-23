@@ -16,7 +16,7 @@ limitations under the License.
 
 package sqlparser
 
-import "git.100tal.com/wangxiao_jichujiagou_common/dts/proto"
+import "github.com/nicholaskh/opendts/proto"
 
 // RedactSQLQuery returns a sql string with the params stripped out for display
 func RedactSQLQuery(sql string) (string, error) {

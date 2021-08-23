@@ -20,7 +20,7 @@ import (
 	"strconv"
 	"time"
 
-	"git.100tal.com/wangxiao_jichujiagou_common/dts/util/sync2"
+	"github.com/nicholaskh/opendts/util/sync2"
 )
 
 // CounterDuration exports a time.Duration as counter.
