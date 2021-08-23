@@ -7,13 +7,13 @@
 当前我们遇到哪些问题？
 
 ## MySQL数据库跨库同步
-![跨库同步dts.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627539820/%E8%B7%A8%E5%BA%93%E5%90%8C%E6%AD%A5dts.png)
+![跨库同步dts.png](https://github.com/nicholaskh/opendts/blob/master/image/%E8%B7%A8%E5%BA%93%E5%90%8C%E6%AD%A5dts.png)
 
 如上图所示，业务开发过程中，我们偶尔需要同步一个MySQL Database的数据到另一个Database里。同步过程中，可能会修改库名、表名、字段名，以及做一些过滤操作。
 比如user库的user表，在微服务架构中，可能需要和每个微服务的MySQL都在同一个实例里存储一份，以此来方便做业务上的join操作。通常的操作我们会在user服务里把写入双写到kafka里，其它服务订阅kafka来更新各自的user库。而如果有了DTS，操作就方便多了，我们只需要建一个同步链路即可，其它的就交给DTS处理了。
 
 ## MySQL数据库扩容
-![DB扩容.png](http://ttc-tal.oss-cn-beijing.aliyuncs.com/1627540226/DB%E6%89%A9%E5%AE%B9.png)
+![DB扩容.png](https://github.com/nicholaskh/opendts/blob/master/image/DB%E6%89%A9%E5%AE%B9.png)
 
 如上图所示，在做分库分表的过程中，我们有时候会希望对现有的架构进行扩容，如3个库扩展到6个库，这个时候会涉及到数据的迁移，以及存量数据迁移后无缝开启增量数据同步。
 数据迁移过程中，我们往往会迁移部分命中分片逻辑的数据，如下图所示，新的DB5是id%6=4（6个分片，余数从0开始），而DB6是id%6=5。
