@@ -1,0 +1,14 @@
+vendor
+y.output
+bin
+logs
+.coverage.*
+.vscode
+
+*.swp
+*.swo
+.idea
+
+go.sum
+
+dts
