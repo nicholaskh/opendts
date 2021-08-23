@@ -47,7 +47,7 @@ POST
 
 #### 举例
 ```bash
-curl -i -XPOST -H 'content-type:application/json' -H 'Authorization:Basic cmVwbGljYXRvcjpkdHNmb3IzLjE0MTU5MjY=' -d '{"task":{"source":{"host":"127.0.0.1","port":5306,"username":"xes_replicator","password":"IYQBXGil84d44ee92cLjLHankV2rVyCg+"},"kafka":{"addr":"127.0.0.1:9092","topic":"replicator_test","flat_format":false},"filters":[{"dbname":"oa_data_service","match":"/xes_class_students_\\d+/","filter":""},{"dbname":"oa_data_service","match":"check_delay","filter":""}],"incr":true}}' 'http://127.0.0.1:8080/v1/dispatch/submit'
+curl -i -XPOST -H 'content-type:application/json' -H 'Authorization:Basic cmVwbGljYXRvcjpkdHNmb3IzLjE0MTU5MjY=' -d '{"task":{"source":{"host":"127.0.0.1","port":5306,"username":"replicator","password":""},"kafka":{"addr":"127.0.0.1:9092","topic":"replicator_test","flat_format":false},"filters":[{"dbname":"oa_data_service","match":"/class_students_\\d+/","filter":""},{"dbname":"oa_data_service","match":"check_delay","filter":""}],"incr":true}}' 'http://127.0.0.1:8080/v1/dispatch/submit'
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Kratos-Status-Code: 0
@@ -118,7 +118,7 @@ PUT
 
 #### 举例
 ```bash
-curl -i -XPUT -H 'content-type:application/json' -H 'Authorization:Basic cmVwbGljYXRvcjpkdHNmb3IzLjE0MTU5MjY=' -d '{"task":{"source":{"host":"127.0.0.1","port":5306,"username":"xes_replicator","password":"IYQBXGil84d44ee92cLjLHankV2rVyCg+"},"kafka":{"addr":"127.0.0.1:9092","topic":"replicator_test","flat_format":false},"filters":[{"dbname":"oa_data_service","match":"/xes_class_students_\\d+/","filter":""},{"dbname":"oa_data_service","match":"check_delay","filter":""}],"incr":true}}' 'http://127.0.0.1:8080/v1/dispatch/alter/1'
+curl -i -XPUT -H 'content-type:application/json' -H 'Authorization:Basic cmVwbGljYXRvcjpkdHNmb3IzLjE0MTU5MjY=' -d '{"task":{"source":{"host":"127.0.0.1","port":5306,"username":"replicator","password":"IYQBXGil84d44ee92cLjLHankV2rVyCg+"},"kafka":{"addr":"127.0.0.1:9092","topic":"replicator_test","flat_format":false},"filters":[{"dbname":"oa_data_service","match":"/class_students_\\d+/","filter":""},{"dbname":"oa_data_service","match":"check_delay","filter":""}],"incr":true}}' 'http://127.0.0.1:8080/v1/dispatch/alter/1'
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Kratos-Status-Code: 0

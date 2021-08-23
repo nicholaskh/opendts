@@ -36,9 +36,9 @@ SELECT * FROM user WHERE id % 6 = 4;
 而一旦有了DTS，事情将变得非常简单。我们只需要针对数据表创建一个DTS任务，MySQL数据就会“实时”地同步到kafka里。
 我们目前支持JSON格式的数据序列化，举例如下所示：
 ```JSON
-{"table":"xes_arris_enrollment_course_stu_1_0","database":"xes_arris_enrollment0","ts":1626959641,"type":"insert","data":{"class_id":0,"cou_stu_status":0,"counselor_id":0,"course_id":0,"created":0,"id":3,"stu_id":0,"updated":0}}
-{"table":"xes_arris_enrollment_course_stu_1_0","database":"xes_arris_enrollment0","ts":1626959656,"type":"delete","data":{"class_id":0,"cou_stu_status":0,"counselor_id":0,"course_id":0,"created":0,"id":3,"stu_id":0,"updated":0}}
-{"table":"xes_arris_enrollment_teacher_course_1_0","database":"xes_arris_enrollment0","ts":1626959681,"type":"insert","data":{"course_id":0,"course_name":"","course_status":1,"created":0,"difficulty_id":0,"difficulty_name":"","final_plan_etime":0,"first_plan_stime":0,"grade_ids":"","grade_names":"","id":1,"outline_ids":"","outline_names":"","relation_status":1,"school_schedule":"","school_schedule_name":"","schooltime_name":"","subject_ids":"","subject_names":"","teacher_id":0,"term_ids":"","term_names":"","tutor_ids":"","tutor_names":"","type_1_id":0,"type_1_name":"","type_2_id":0,"updated":0,"version_id":0,"version_name":"","year_id":0}}
+{"table":"arris_enrollment_course_stu_1_0","database":"arris_enrollment0","ts":1626959641,"type":"insert","data":{"class_id":0,"cou_stu_status":0,"counselor_id":0,"course_id":0,"created":0,"id":3,"stu_id":0,"updated":0}}
+{"table":"arris_enrollment_course_stu_1_0","database":"arris_enrollment0","ts":1626959656,"type":"delete","data":{"class_id":0,"cou_stu_status":0,"counselor_id":0,"course_id":0,"created":0,"id":3,"stu_id":0,"updated":0}}
+{"table":"arris_enrollment_teacher_course_1_0","database":"arris_enrollment0","ts":1626959681,"type":"insert","data":{"course_id":0,"course_name":"","course_status":1,"created":0,"difficulty_id":0,"difficulty_name":"","final_plan_etime":0,"first_plan_stime":0,"grade_ids":"","grade_names":"","id":1,"outline_ids":"","outline_names":"","relation_status":1,"school_schedule":"","school_schedule_name":"","schooltime_name":"","subject_ids":"","subject_names":"","teacher_id":0,"term_ids":"","term_names":"","tutor_ids":"","tutor_names":"","type_1_id":0,"type_1_name":"","type_2_id":0,"updated":0,"version_id":0,"version_name":"","year_id":0}}
 ```
 
 ## 双活场景，主从机房间通过DTS做数据实时同步
