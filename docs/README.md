@@ -14,6 +14,41 @@ AP类场景比较类似Maxwell和Canal Otter。
 TP类场景dts还可与dbproxy配合实现在线的数据分片平滑扩容。
 后续TP类场景会全量替换阿里云dts。
 
+## Install
+### Dependency
+Go version >= 1.13
+Use go mod for dependency management
+
+### Build 
+make
+> Output: bin/dts
+
+## Start DTS Service 
+### Launch Dependencies
+- Launch etcd...
+- Launch MySQL to save metadata for dts
+
+### Start dts
+bin/dts -config etc/replicator.ini
+
+## Config
+
+### DTS config 
+etc/replicator.ini
+> use the example and change the dependency addr
+
+### MySQL config (for data source)
+/etc/my.cnf
+```yaml
+[mysqld]
+gtid_mode=on
+enforce_gtid_consistency=on
+
+log_bin=ON
+binlog_format=row
+log-slave-updates=1
+```
+
 ## 功能介绍
 
 ### 基础功能
